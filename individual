@@ -1,0 +1,52 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema Haqiqi
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema Haqiqi
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `Haqiqi` DEFAULT CHARACTER SET utf8 ;
+USE `Haqiqi` ;
+
+-- -----------------------------------------------------
+-- Table `Haqiqi`.`Haqiqi-table`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Haqiqi`.`Haqiqi-table` (
+  `مشترک حقیقی` INT NOT NULL,
+  `جنسیت` NVARCHAR(10) NOT NULL,
+  `نام` NVARCHAR(40) NOT NULL,
+  `نام خانوادگی` NVARCHAR(40) NOT NULL,
+  `نام پدر` NVARCHAR(40) NOT NULL,
+  `تلفن امکان سنجی` NVARCHAR(40) NOT NULL,
+  `ملیت` NVARCHAR(40) NOT NULL,
+  `شماره شناسه هویتی` NVARCHAR(100) NOT NULL,
+  `شماره شناسنامه` NVARCHAR(50) NOT NULL,
+  `نوع مالکیت` NVARCHAR(40) NOT NULL,
+  `نام مالک خط` NVARCHAR(40) NOT NULL,
+  `تلفن همراه` NVARCHAR(40) NOT NULL,
+  `پست الکترونیک` NVARCHAR(80) NOT NULL,
+  `کدپستی` NVARCHAR(40) NOT NULL,
+  `نوع کاربری` NVARCHAR(40) NOT NULL,
+  `مدرک تحصیلی` NVARCHAR(40) NOT NULL,
+  `نوع مشترک` NVARCHAR(40) NOT NULL,
+  `گروه مشتری` NVARCHAR(40) NOT NULL,
+  `تاریخ تولد` NVARCHAR(40) NOT NULL,
+  `انتخاب تاریخ` NVARCHAR(40) NOT NULL,
+  `معبر آخر` NVARCHAR(40) NOT NULL,
+  `شماره پلاک` NVARCHAR(40) NOT NULL,
+  `آدرس` NVARCHAR(100) NOT NULL,
+  UNIQUE INDEX `شماره شناسه هویتی_UNIQUE` (`شماره شناسه هویتی` ASC) VISIBLE,
+  UNIQUE INDEX `شماره شناسنامه_UNIQUE` (`شماره شناسنامه` ASC) VISIBLE,
+  UNIQUE INDEX `تلفن همراه_UNIQUE` (`تلفن همراه` ASC) VISIBLE)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
