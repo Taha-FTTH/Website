@@ -1,0 +1,54 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema Hoquqi-table
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema Hoquqi-table
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `Hoquqi-table` DEFAULT CHARACTER SET utf8 ;
+USE `Hoquqi-table` ;
+
+-- -----------------------------------------------------
+-- Table `Hoquqi-table`.`Hoquqi`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Hoquqi-table`.`Hoquqi` (
+  `مشترک حقوقی` INT NOT NULL,
+  `نام شرکت` NVARCHAR(100) NOT NULL,
+  `نام نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
+  `نام خانوادگي نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
+  `ملیت نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
+  `نوع شناسه هویتی` NVARCHAR(100) NOT NULL,
+  `شماره شناسنامه نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
+  `شماره شناسه هویتی نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
+  `تلفن امکان سنجی` NVARCHAR(100) NOT NULL,
+  `نوع مالکیت` NVARCHAR(100) NOT NULL,
+  `شناسه ملی شرکت` NVARCHAR(100) NOT NULL,
+  `شماره ثبت` NVARCHAR(100) NOT NULL,
+  `کد اقتصادی` NVARCHAR(100) NOT NULL,
+  `نوع شرکت` NVARCHAR(100) NOT NULL,
+  `تلفن همراه` NVARCHAR(100) NOT NULL,
+  `پست الکترونیک` NVARCHAR(100) NOT NULL,
+  `کد پستی` NVARCHAR(100) NOT NULL,
+  `نوع کاربري` NVARCHAR(100) NOT NULL,
+  `مدرک تحصيلي نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
+  `نوع مشترک` NVARCHAR(100) NOT NULL,
+  `گروه مشتري` NVARCHAR(100) NOT NULL,
+  `تاريخ تاسيس` DATETIME(6) NOT NULL,
+  `تاريخ تولد نماينده/مديرعامل` DATETIME(6) NOT NULL,
+  `شماره پلاک` NVARCHAR(100) NOT NULL,
+  UNIQUE INDEX `شماره شناسه هویتی نماينده/مديرعامل_UNIQUE` (`شماره شناسه هویتی نماينده/مديرعامل` ASC) VISIBLE,
+  UNIQUE INDEX `شناسه ملی شرکت_UNIQUE` (`شناسه ملی شرکت` ASC) VISIBLE,
+  UNIQUE INDEX `شماره ثبت_UNIQUE` (`شماره ثبت` ASC) VISIBLE,
+  PRIMARY KEY (`مشترک حقوقی`))
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
