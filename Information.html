@@ -1,374 +1,310 @@
-
-
 <!DOCTYPE html>
-
 <head>
+    <style>
+        body{
+            text-align: right;
+            align-content: end;
+            font-size:18px;
+            font-weight:bold;
+            background-color: rgb(88, 88, 88);
+        }
 
-    <style>
+        input[type="text"]::placeholder {
+              text-align: right;
+              margin-right:8px;
+              font-size: 15px;
+         }
 
-        body{
+         input{
+            width:200px;
+            height:30px;
+            margin-top:0px;
+            border-style:solid;
+            border-radius: 5px;
+         }
 
-            text-align: right;
+        .company-info-div,.personal-info-div{
+            box-shadow: 2px 5px 10px 3px;
+            margin:20px;
+            width:650px;
+            padding:18px;
+            background-color: white;
+            
+          }
 
-            align-content: end;
+          .company-info-title,.personal-info-title{
+            font-size:28px;
+            font-weight:bold;
+            color:red;
+            margin-right:200px;
+          }
 
-        }
+          button[type="submit"] {
+				padding: 15px;
+				border-radius: 10px;
+				border: none;
+				background: linear-gradient(to right,rgb(217, 23, 23),rgb(110, 20, 20),rgb(16, 3, 3));
+				color: white;
+				cursor: pointer;
+				width: 100%;
+				font-size: 16px;
+                margin-top:40px;
+			}
 
 
-        input[type="text"]::placeholder {
-
-             
-
-
-             text-align: right;
-
-         }
-
-
-        .company-info-div,.personal-info-div{
-
-            border:2px;
-
-            border-style: solid;
-
-            margin:20px;
-
-            width:650px;
-
-            
-
-          }
-
-    </style>
-
+    </style>
 </head>
-
 <body>
+    <div class="main-div" style="display: flex; justify-content:center;">
 
-    <div class="main-div" style="display: flex; justify-content:center;">
+        <div class="company-info-div" >
 
+            <p class="company-info-title">فرم عضویت افراد حقوقی</p>
 
-        <div class="company-info-div" >
+                <p class="company-name-title">نام شرکت</p>
+                <input type="text" class="company-name-input" placeholder="نام شرکت">
 
+                <div class="rep-name-main-div" style="display: flex; justify-content: space-between;">
 
-            <p class="company-info-title">فرم عضویت افراد حقوقی</p>
+                    <div class="rep-last-name-div">
+                        <p class="rep-last-name-title" style="display: block;">نام خانوادگی نماینده/ مدیر عامل</p>
+                        <input class="rep-last-name-iput" type="text" placeholder="نام خانوادگی">
+                    </div>
 
+                    <div class="rep-name-div">
+                        <p class="rep-name-title" style="display: block;">نام نماینده/ مدیر عامل</p>
+                        <input class="rep-name-iput" type="text" placeholder="نام">
+                        
+                    </div>
 
-                <p class="company-name-title">نام شرکت</p>
+                </div>
 
-                <input type="text" class="company-name-input" placeholder="نام شرکت">
+                <p class="rep-gender">جنسیت</p>
+                <select
+                id="gender"
+                name="gender"
+                required
+            >
+                <option value="male">
+                    مرد
+                </option>
+                <option value="female">
+                    زن
+                </option>
+            
+                </select>
 
+                <div class="rep-age-education-div" style="display: flex; justify-content: space-between;">
 
-                <div class="rep-name-main-div" style="display: flex; justify-content: space-between;">
+                    <div class="education-div">
 
+                        <p class="rep-education">میزان تحصیلات</p>
+                        <select> 
+                         <option value="others">
+                             زیر دیپلم 
+                            </option>
+                             <option value="diploma">
+                                دیپلم
+                             </option>
+                             <option value="bachelor">
+                              لیسانس
+                             </option>
+                             <option value="master">
+                               فوق لیسانس
+                             </option>
+                             <option value="p.h.d">
+                              دکتری
+                             </option>
+                        </select>
 
-                    <div class="rep-last-name-div">
+                    </div>
 
-                        <p class="rep-last-name-title" style="display: block;">نام خانوادگی نماینده/ مدیر عامل</p>
+                    <div class="red-birthday-div">
 
-                        <input class="rep-last-name-iput" type="text" placeholder="نام خانوادگی">
+                        <p class="rep-birthday">تاریخ تولد</p>
+                        <input class="rep-birthday-input" type="text" placeholder="01/01/1375">
 
-                    </div>
+                    </div>
 
+                </div>
 
-                    <div class="rep-name-div">
 
-                        <p class="rep-name-title" style="display: block;">نام نماینده/ مدیر عامل</p>
+                <p class="rep-nationality">ملیت نماینده/ مدیر عامل</p>
+                <input class="rep-nationality" type="text" placeholder="ملیت">
 
-                        <input class="rep-name-iput" type="text" placeholder="نام">
+                <p class="rep-father-name">نام پدر نماینده/ مدیر عامل</p>
+                <input  class="rep-father-name-input" type="text" placeholder="نام پدر ">
 
-                        
+                <div class="rep-h-id-div" style="display: flex; justify-content: space-between; ">
 
-                    </div>
+                    <div class="rep-h-id-type-div">
 
+                        <p class="rep-h-id-type">نوع شناسه هویتی</p>
+                        <input class="rep-h-id-type-input" type="text" placeholder="نوع شناسه هویتی">
 
-                </div>
+                    </div>
 
+                    <div class="rep-h-id-div">
 
-                <div class="rep-age-education-div" style="display: flex; justify-content: space-between;">
+                        <p class="rep-h-id" style="display: block;">شماره شناسه هویتی نماینده / مدیر عامل</p>
+                        <input class="rep-h-id-input" type="text" placeholder="شماره شناسه هویتی">
 
+                    </div>
 
-                    <div class="education-div">
 
+                </div>
 
-                        <p class="rep-education">میزان تحصیلات</p>
+                <div class="company-registery-div" style="display:flex; justify-content: space-between;">
 
-                        <select> 
+                    <div class="rep-company-id-div">
 
-                         <option value="others">
+                        <p class="rep-company-id">شناسه ملی شرکت</p>
+                        <input class="rep-company-id-input" type="text" placeholder="شناسه ملی شرکت">
 
-                             زیر دیپلم 
+                    </div>
 
-                            </option>
+                    <div class="rep-registration-number-div">
 
-                             <option value="diploma">
+                        <p class="rep-registration-number">شماره ثبت</p>
+                        <input class="rep-registration-number-input" type="text" placeholder="شماره ثبت">
 
-                                دیپلم
+                    </div>
 
-                             </option>
+                    <div class="rep-ecode-div">
 
-                             <option value="bachelor">
+                        <p class="rep-ecode">کد اقتصادی</p>
+                        <input class="rep-ecode-input" type="text" placeholder="کد اقتصادی">
 
-                              لیسانس
+                    </div>
+                </div>
 
-                             </option>
+                <p class="rep-landline-owner">نام مالک خط</p>
+                <input class="rep-landline-owner-input" type="text" placeholder="نام مالک خط">
 
-                             <option value="master">
+                <p class="rep-customer-group">گروه مشتری</p>
+                <input class="rep-customer-group" type="text" placeholder="گروه مشتری">
 
-                               فوق لیسانس
+                <div class="rep-adress-post-div" style="display: flex; justify-content: space-between;">
 
-                             </option>
+                    <div class="rep-postal-code-div">
 
-                             <option value="p.h.d">
+                        <p class="rep-postal-code">کد پستی</p>
+                        <input class="rep-postal-code-input" type="text" placeholder="کد پستی">
 
-                              دکتری
+                    </div>
 
-                             </option>
+                    <div class="rep-adress-div">
 
-                        </select>
+                        <p class="rep-adress">ادرس</p>
+                        <input class="rep-adress-input" type="text" placeholder="خیابان - کوچه - پلاک">
 
+                    </div>
 
-                    </div>
+                </div>
 
 
-                    <div class="red-birthday-div">
+               <p class="rep-phone">تلفن همراه</p>
+               <input class="rep-phone-input" type="text" placeholder="0912123456">
 
+               <p class="rep-email">پست الکترونیکی</p>
+               <input class="rep-email-input" type="text" placeholder="example@gmail.com">
 
-                        <p class="rep-birthday">تاریخ تولد</p>
+               <button type="submit">
+                ذخیره
+            </button>
 
-                        <input class="rep-birthday-input" type="text" placeholder="01/01/1375">
+        </div>
 
+        <div class="personal-info-div">
 
-                    </div>
+            <p class="personal-info-title">فرم عضویت افراد حقیقی</p>
 
+            <p class="personal-last-name-title">نام خانوادگی </p>
+            <input class="personal-last-name-iput" type="text" placeholder="نام خانوادگی">
 
-                </div>
+            <p class="personal-name-title">نام </p>
+            <input class="personal-name-iput" type="text" placeholder="نام">
 
 
+                <p class="personal-gender">جنسیت</p>
+                <select
+                id="gender"
+                name="gender"
+                required
+            >
+                <option value="male">
+                    مرد
+                </option>
+                <option value="female">
+                    زن
+                </option>
+            
+                </select>
 
-                <p class="rep-nationality">ملیت نماینده/ مدیر عامل</p>
+                <div class="personal-age-education-div" style="display: flex; justify-content: space-between;">
 
-                <input class="rep-nationality" type="text" placeholder="ملیت">
+                    <div class="personal-education-div">
 
+                        <p class="personal-education">میزان تحصیلات</p>
+                        <select> 
+                         <option value="others">
+                             زیر دیپلم 
+                            </option>
+                             <option value="diploma">
+                                دیپلم
+                             </option>
+                             <option value="bachelor">
+                              لیسانس
+                             </option>
+                             <option value="master">
+                               فوق لیسانس
+                             </option>
+                             <option value="p.h.d">
+                              دکتری
+                             </option>
+                        </select>
 
-                <p class="rep-father-name">نام پدر نماینده/ مدیر عامل</p>
+                    </div>
 
-                <input  class="rep-father-name-input" type="text" placeholder="نام پدر ">
+                    <div class="personal-birthday-div">
 
+                        <p class="personal-birthday">تاریخ تولد</p>
+                        <input class="personal-birthday-input" type="text" placeholder="01/01/1375">
 
-                <div class="rep-h-id-div" style="display: flex; justify-content: space-between; ">
+                    </div>
 
+                </div>
 
-                    <div class="rep-h-id-type-div">
 
+                <p class="personal-nationality">ملیت </p>
+                <input class="personal-nationality" type="text" placeholder="ملیت">
 
-                        <p class="rep-h-id-type">نوع شناسه هویتی</p>
+                <p class="personal-father-name">نام پدر</p>
+                <input  class="personal-father-name-input" type="text" placeholder="نام پدر ">
 
-                        <input class="rep-h-id-type-input" type="text" placeholder="نوع شناسه هویتی">
 
+                <p class="personal-landline-owner">نام مالک خط</p>
+                <input class="personal-landline-owner-input" type="text" placeholder="نام مالک خط">
 
-                    </div>
+                <p class="personal-customer-group">گروه مشتری</p>
+                <input class="personal-customer-group" type="text" placeholder="گروه مشتری">
 
+               <p class="personal-adress">ادرس</p>
+               <input class="personal-adress-input" type="text" placeholder="خیابان - کوچه - پلاک">
 
-                    <div class="rep-h-id-div">
+               <p class="personal-postal-code">کد پستی</p>
+               <input class="personal-postal-code-input" type="text" placeholder="کد پستی">
 
+               <p class="personal-phone">تلفن همراه</p>
+               <input class="personal-phone-input" type="text" placeholder="0912123456">
 
-                        <p class="rep-h-id" style="display: block;">شماره شناسه هویتی نماینده / مدیر عامل</p>
+               <p class="personal-email">پست الکترونیکی</p>
+               <input class="rep-email-input" type="text" placeholder="example@gmail.com">
 
-                        <input class="rep-h-id-input" type="text" placeholder="شماره شناسه هویتی">
-
-
-                    </div>
-
-
-
-                </div>
-
-
-                <div class="company-registery-div" style="display:flex; justify-content: space-between;">
-
-
-                    <div class="rep-company-id-div">
-
-
-                        <p class="rep-company-id">شناسه ملی شرکت</p>
-
-                        <input class="rep-company-id-input" type="text" placeholder="شناسه ملی شرکت">
-
-
-                    </div>
-
-
-                    <div class="rep-registration-number-div">
-
-
-                        <p class="rep-registration-number">شماره ثبت</p>
-
-                        <input class="rep-registration-number-input" type="text" placeholder="شماره ثبت">
-
-
-                    </div>
-
-
-                    <div class="rep-ecode-div">
-
-
-                        <p class="rep-ecode">کد اقتصادی</p>
-
-                        <input class="rep-ecode-input" type="text" placeholder="کد اقتصادی">
-
-
-                    </div>
-
-                </div>
-
-
-                <p class="rep-landline-owner">نام مالک خط</p>
-
-                <input class="rep-landline-owner-input" type="text" placeholder="نام مالک خط">
-
-
-                <p class="rep-customer-group">گروه مشتری</p>
-
-                <input class="rep-customer-group" type="text" placeholder="گروه مشتری">
-
-
-
-               <p class="rep-email">پست الکترونیکی</p>
-
-               <input class="rep-email-input" type="text" placeholder="example@gmail.com">
-
-
-               <p class="rep-postal-code">کد پستی</p>
-
-               <input class="rep-postal-code-input" type="text" placeholder="کد پستی">
-
-
-
-               <p class="rep-adress">ادرس</p>
-
-               <input class="rep-adress-input" type="text" placeholder="خیابان - کوچه - پلاک">
-
-
-               <p class="rep-phone">تلفن همراه</p>
-
-               <input class="rep-phone-input" type="text" placeholder="0912123456">
-
-
-               <p class="rep-gender">جنسیت</p>
-
-               <select
-
-               id="gender"
-
-               name="gender"
-
-               required
-
-           >
-
-               <option value="male">
-
-                   مرد
-
-               </option>
-
-               <option value="female">
-
-                   زن
-
-               </option>
-
-           
-
-               </select>
-
-
-
-
-        </div>
-
-
-        <div class="personal-info-div">
-
-
-            <p class="company-info-title">فرم عضویت افراد حقوقی</p>
-
-
-                <p class="company-name-title">نام شرکت</p>
-
-                <input type="text" class="company-name-input" placeholder="نام شرکت">
-
-
-                <div class="rep-name-main-div" style="display: flex; column-gap:25px;">
-
-
-                    <div class="rep-last-name-div">
-
-                        <p class="rep-last-name-title" style="display: block;">نام خانوادگی نماینده/ مدیر عامل</p>
-
-                        <input class="rep-last-name-iput" type="text" placeholder="نام خانوادگی">
-
-                    </div>
-
-
-                    <div class="rep-name-div">
-
-                        <p class="rep-name-title" style="display: block;">نام نماینده/ مدیر عامل</p>
-
-                        <input class="rep-name-iput" type="text" placeholder="نام">
-
-                    </div>
-
-
-                </div>
-
-
-                <p class="rep-father-name">نام پدر نماینده/ مدیر عامل</p>
-
-                <input  class="rep-father-name-input" type="text" placeholder="نام پدر ">
-
-
-                <div class="rep-h-id-div" style="display: flex; column-gap:25px;">
-
-
-                    <div class="rep-h-id-type-div">
-
-
-                        <p class="rep-h-id-type">نوع شناسه هویتی</p>
-
-                        <input class="rep-h-id-type-input" type="text" placeholder="نوع شناسه هویتی">
-
-
-                    </div>
-
-
-                    <div class="rep-h-id-div">
-
-
-                        <p class="rep-h-id" style="display: block;">شماره شناسه هویتی نماینده / مدیر عامل</p>
-
-                        <input class="rep-h-id-input" type="text" placeholder="شماره شناسه هویتی">
-
-
-                    </div>
-
-
-
-                </div>
-
-
-                <p class="rep-nationality">ملیت نماینده/ مدیر عامل</p>
-
-                <input class="rep-nationality" type="text" placeholder="ملیت">
-
-
-                <p class="rep-landline-owner">نام مالک خط</p>
-
-                <input class="rep-landline-owner-input" type="text" placeholder="نام مالک خط">
-
-    </div>
-
+               <button type="submit" style="margin-bottom:0px; margin-top:135px;">
+                ذخیره
+            </button>
+    </div>
 </body>
 
 
