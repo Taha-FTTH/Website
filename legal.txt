@@ -1,54 +1,71 @@
--- MySQL Workbench Forward Engineering
+-- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+--
+-- Host: localhost    Database: database
+-- ------------------------------------------------------
+-- Server version	8.0.36
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- -----------------------------------------------------
--- Schema Hoquqi-table
--- -----------------------------------------------------
+--
+-- Table structure for table `legal`
+--
 
--- -----------------------------------------------------
--- Schema Hoquqi-table
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `Hoquqi-table` DEFAULT CHARACTER SET utf8 ;
-USE `Hoquqi-table` ;
+DROP TABLE IF EXISTS `legal`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `legal` (
+  `نام شرکت` varchar(50) NOT NULL,
+  `نام نماينده/مديرعامل` varchar(20) NOT NULL,
+  `نام خانوادگي نماينده/مديرعامل` varchar(40) NOT NULL,
+  `ملیت نماينده/مديرعامل` varchar(15) NOT NULL,
+  `نوع شناسه هویتی` varchar(30) NOT NULL,
+  `شماره شناسنامه نماينده` varchar(45) NOT NULL,
+  `شماره شناسه هویتی نماينده` varchar(45) NOT NULL,
+  `تلفن امکان سنجی` varchar(20) NOT NULL,
+  `نوع مالکیت` varchar(10) NOT NULL,
+  `شناسه ملی شرکت` varchar(20) NOT NULL,
+  `شماره ثبت` varchar(20) NOT NULL,
+  `کد اقتصادی` varchar(20) NOT NULL,
+  `نوع شرکت` varchar(10) NOT NULL,
+  `تلفن همراه` varchar(20) NOT NULL,
+  `پست الکترونیک` varchar(45) NOT NULL,
+  `کد پستی` varchar(30) NOT NULL,
+  `نوع کاربري` varchar(20) NOT NULL,
+  `مدرک تحصيلي نماينده/مديرعامل` varchar(45) NOT NULL,
+  `نوع مشترک` varchar(20) NOT NULL,
+  `گروه مشتري` varchar(20) NOT NULL,
+  `تاریخ تاسیس` varchar(10) NOT NULL,
+  `تاريخ تولد نماينده/مديرعامل` varchar(10) NOT NULL,
+  `شماره پلاک` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- -----------------------------------------------------
--- Table `Hoquqi-table`.`Hoquqi`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Hoquqi-table`.`Hoquqi` (
-  `مشترک حقوقی` INT NOT NULL,
-  `نام شرکت` NVARCHAR(100) NOT NULL,
-  `نام نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
-  `نام خانوادگي نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
-  `ملیت نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
-  `نوع شناسه هویتی` NVARCHAR(100) NOT NULL,
-  `شماره شناسنامه نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
-  `شماره شناسه هویتی نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
-  `تلفن امکان سنجی` NVARCHAR(100) NOT NULL,
-  `نوع مالکیت` NVARCHAR(100) NOT NULL,
-  `شناسه ملی شرکت` NVARCHAR(100) NOT NULL,
-  `شماره ثبت` NVARCHAR(100) NOT NULL,
-  `کد اقتصادی` NVARCHAR(100) NOT NULL,
-  `نوع شرکت` NVARCHAR(100) NOT NULL,
-  `تلفن همراه` NVARCHAR(100) NOT NULL,
-  `پست الکترونیک` NVARCHAR(100) NOT NULL,
-  `کد پستی` NVARCHAR(100) NOT NULL,
-  `نوع کاربري` NVARCHAR(100) NOT NULL,
-  `مدرک تحصيلي نماينده/مديرعامل` NVARCHAR(100) NOT NULL,
-  `نوع مشترک` NVARCHAR(100) NOT NULL,
-  `گروه مشتري` NVARCHAR(100) NOT NULL,
-  `تاريخ تاسيس` DATETIME(6) NOT NULL,
-  `تاريخ تولد نماينده/مديرعامل` DATETIME(6) NOT NULL,
-  `شماره پلاک` NVARCHAR(100) NOT NULL,
-  UNIQUE INDEX `شماره شناسه هویتی نماينده/مديرعامل_UNIQUE` (`شماره شناسه هویتی نماينده/مديرعامل` ASC) VISIBLE,
-  UNIQUE INDEX `شناسه ملی شرکت_UNIQUE` (`شناسه ملی شرکت` ASC) VISIBLE,
-  UNIQUE INDEX `شماره ثبت_UNIQUE` (`شماره ثبت` ASC) VISIBLE,
-  PRIMARY KEY (`مشترک حقوقی`))
-ENGINE = InnoDB;
+--
+-- Dumping data for table `legal`
+--
 
+LOCK TABLES `legal` WRITE;
+/*!40000 ALTER TABLE `legal` DISABLE KEYS */;
+INSERT INTO `legal` VALUES ('Company Name','','','','','','','','','','','','','','','','','','','','','',''),('Name of representative/CEO','','','','','','','','','','','','','','','','','','','','','',''),('Family name of representative/CEO','','','','','','','','','','','','','','','','','','','','','',''),('Name of the representative/CEO\'s father','','','','','','','','','','','','','','','','','','','','','',''),('Nationality of representative/CEO','','','','','','','','','','','','','','','','','','','','','',''),('Type of ID','','','','','','','','','','','','','','','','','','','','','',''),('ID number of representative/CEO','','','','','','','','','','','','','','','','','','','','','',''),('ID number of representative/CEO','','','','','','','','','','','','','','','','','','','','','',''),('Feasibility phone 2177402029','','','','','','','','','','','','','','','','','','','','','',''),('Type of ownership','','','','','','','','','','','','','','','','','','','','','',''),('Line owner name','','','','','','','','','','','','','','','','','','','','','',''),('national ID ','','','','','','','','','','','','','','','','','','','','','',''),('registration number ','','','','','','','','','','','','','','','','','','','','','',''),('Economic code','','','','','','','','','','','','','','','','','','','','','',''),('Company type ','','','','','','','','','','','','','','','','','','','','','',''),('Cellular phone ','','','','','','','','','','','','','','','','','','','','','',''),('E-mail ','','','','','','','','','','','','','','','','','','','','','',''),('Postal code ','','','','','','','','','','','','','','','','','','','','','',''),('User type','','','','','','','','','','','','','','','','','','','','','',''),('Representative\'s/CEO\'s educational qualification','','','','','','','','','','','','','','','','','','','','','',''),('Common type','','','','','','','','','','','','','','','','','','','','','',''),('Customer group','','','','','','','','','','','','','','','','','','','','','',''),('Date of establishment','','','','','','','','','','','','','','','','','','','','','',''),('Date of birth of representative/CEO','','','','','','','','','','','','','','','','','','','','','',''),('Last passage','','','','','','','','','','','','','','','','','','','','','',''),('Number plates ','','','','','','','','','','','','','','','','','','','','','',''),('Address','','','','','','','','','','','','','','','','','','','','','','');
+/*!40000 ALTER TABLE `legal` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-05-14 22:24:50
