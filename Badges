@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+
+        body{
+            margin: 0;
+            background-color:rgb(122, 122, 122) ;
+        }
+
+        .badge-main-div{
+            display: flex; 
+            justify-content: space-around;
+            width: 500px;
+            margin-left:600px;
+            }
+
+        .delivery-guarantee-text,.express-delivery-text,.service-guarantee-text,.representitive-text{
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="badge-main-div">
+
+        <div class="delivery-guarantee-div">
+
+            <img class="delivery-guarantee-icon" src="icons/delivery-guarantee.png">
+            <p class="delivery-guarantee-text">ضمانت ارسال</p>
+
+        </div>
+
+        <div class="express-deliver-div">
+
+            <img class="express-delivery-icon" src="icons/express-delivery.png">
+            <p class="express-delivery-text">ارسال اکسپرس</p>
+
+        </div>
+
+        <div class="service-guarantee-div">
+
+            <img class="service-guarantee-icon" src="icons/service-guarantee.png">
+            <p class="service-guarantee-text">ضمانت ارسال</p>
+
+        </div>
+
+        <div class="representitive-div">
+
+            <img class="representitive-icon" src="icons/representetive.png">
+            <p class="representitive-text">نماینده مخابرات</p>
+        </div>
+
+    </div>
+</body>
