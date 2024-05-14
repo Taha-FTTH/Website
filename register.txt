@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
 --
--- Host: localhost    Database: register
+-- Host: localhost    Database: database
 -- ------------------------------------------------------
 -- Server version	8.0.36
 
@@ -23,16 +23,14 @@ DROP TABLE IF EXISTS `register`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `register` (
-  `ثبت نام` varchar(5) NOT NULL,
-  `نام و نام خانوادگی` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `تلفن همراه` varchar(30) NOT NULL,
-  `تلفن ثابت` varchar(30) NOT NULL,
-  `نام کاربری` varchar(30) NOT NULL,
-  `رمز عبور` varchar(45) NOT NULL,
-  PRIMARY KEY (`ثبت نام`),
-  UNIQUE KEY `تلفن همراه_UNIQUE` (`تلفن همراه`),
-  UNIQUE KEY `تلفن ثابت_UNIQUE` (`تلفن ثابت`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `نام و نام خانوادگی` varchar(45) NOT NULL,
+  `تلفن همراه` varchar(20) NOT NULL,
+  `تلفن ثابت` varchar(20) NOT NULL,
+  `شناسه مشتری` int NOT NULL AUTO_INCREMENT,
+  `رمز عبور` varchar(20) NOT NULL,
+  PRIMARY KEY (`شناسه مشتری`),
+  UNIQUE KEY `شناسه مشتری_UNIQUE` (`شناسه مشتری`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -53,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-23 19:53:46
+-- Dump completed on 2024-05-14 22:24:50
