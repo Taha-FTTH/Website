@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <title>Top Banner</title>
+    <style>
+
+    body{
+        margin: 0;
+        font-family:Arial;
+    }
+        .top-banner-div{
+            align-content: center;
+            align-content: center;
+            background-image: url('images/top-banner-background.jpg');
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+        }
+
+        .top-banner-elements-div{
+            text-align: right;
+            margin-right:100px;
+            width:490px;
+            margin-left:900px;
+            margin-top:100px;
+            padding-bottom:200px;
+        }
+
+        .top-banner-title{
+            color: white;
+            font-weight: bold;
+            font-size:20px;
+        }
+
+        .top-banner-slogan{
+            color: white;
+            font-weight: bold;
+            font-size:35px;
+        }
+
+        .top-banner-description{
+            color: white;
+        }
+
+        .top-banner-register-button, .top-banner-more-button{
+            color: white;
+            background-color: gray;
+            font-size: 18px;
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-right:20px;
+            padding-left:20px;
+            border-style:solid;
+            border-color: white;
+            border-radius: 10px;
+            margin-left:15px;
+        }
+
+        .top-banner-register-button:hover {
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.5s;
+        }
+
+        .top-banner-more-button:hover {
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-banner-div">
+
+        <div class="top-banner-elements-div">
+
+            <p class="top-banner-title">اینترنت فیبر نوری مخابرات</p>
+
+            <p class="top-banner-slogan">پرسرعت‌، بدون قطعی با پایداری بالا</p>
+
+            <p class="top-banner-description">با دریافت سرویس اینترنت فیبر نوری (FTTH) می‌توانید از پر سرعت‌ترین اینترنت ثابت ایران بدون محدودیت با سرعت آپلود و دانلود برابر، بدون نویز و بی‌نیاز به خط تلفن تا سقف 300 مگابیت بهره‌مند شوید.</p>
+
+            <div class="top-banner-buttons-div">
+                <button class="top-banner-more-button">اطلاعات مراجعه حضوری</button>
+                <button class="top-banner-register-button">ثبت‌ نام آنلاین سرویس</button>
+            </div>
+
+        </div>
+    </div>
+</body>
