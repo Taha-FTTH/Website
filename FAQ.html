@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background:linear-gradient(to right,rgb(217, 23, 23),rgb(110, 20, 20),rgb(16, 3, 3));
+  color: rgb(255, 248, 248);
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  width: 85%;
+  height: 50px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  transition: 1s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+  border-radius: 40px; 
+  color: rgb(239, 74, 74);
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h1 style="color: rgb(100, 10, 10);">سوالات رایج</h1>
+        <button class="accordion">مهم‌ترین دلایل تمایز اینترنت فیبر نوری نسبت به سرویس‌ها دیگر چیست؟ </button>
+<div class="panel">
+  <p>اینترنت فیبرنوری بدون اختلال، نویز و قطعی است. چون فیبرهای انتقال دهنده دیتا برخلاف سیم‌های مسی از جنس شیشه و نارسانا بوده و می‌توانند بالاترین سرعت را به مشترک انتقال دهند. </p>
+</div>
+
+        <button class="accordion">در حال حاضر حداکثر سرعت ارائه شده در سرویس های FTTH چند مگابیت بر ثانیه است؟ </button>
+<div class="panel"><p> حدود ۳۰۰ مگابایت بر ثانیه. سرویس های "فیبر در خانه" اینترنت فیبر نوری می توانند سرعتی بالغ بر ۳۰۰ مگابایت بر ثانیه ارائه دهند که در مقایسه با سرویس های ADSL و VDSL چیزی در حدود ۱۰ برابر بیشتر است</p></div>
+
+</div>
+<button class="accordion">
+          آیا دوری و نزدیکی به مرکز مخابراتی یا کابینت‌ها در کیفیت و سرعت سرویس اینترنت فیبر نوری تاثیرگذار است؟</button>
+<div class="panel">
+
+<p>شما با داشتن یک فیبر اختصاصی در خانه یا محل کار خود، حتی با دور بودن از مرکز مخابراتی هیچ افت سرعت یا کیفیتی در سریس دریافتی خود مشاهده نخواهید کرد</div>
+<button class="accordion">ایا داشتن خط تلفن ثابت برای دریافت اینترنت فیبر نوری ضروری است؟</button>
+<div class="panel">
+  <p> خیر.مشترکین برای دریافت این اینترنت تنها نیاز به فیبرکشی واحد خود داشته و بدون نیاز به خط تلفن ثابت می توانند از کلیه امکانات اینترنت پر سرعت فیبر بهره مند شوند.</p>
+</div>
+
+<button class="accordion">سرعت اپلود و دانلود در اینترنت فیبر نوری به چه  نسبت تغییر خواهند کرد؟</button>
+<div class="panel">
+  <p> برخلاف دیگر سرویس‌های اینترنتی بر بستر سیم مسی (که سرعت آپلود حدود یک هشتم سرعت دانلود است)، در اینترنت بر بستر فیبر نوری سرعت آپلود و دانلود با هم برابر بوده و به همین دلیل یکی از بهترین و مناسب‌ترین گزینه‌ها برای برگزاری جلسات و کلاس‌های آنلاین، فریلنسینگ، گیمینگ و یا مکالمات تصویری است.</p>
+</div>
+
+<button class="accordion"> آیا دریافت خط تلفن ثابت در مناطقی که مرکز مخابرات، کافو خالی بر بستر سیم مسی ندارد امکان پذیراست؟</button>
+<div class="panel">
+  <p>تنها شرط لازم برای دریافت خط تلفن ثابت (به هر تعداد) در این مناطق، مجهز بودن منطقه شما به بستر فیبر نوری و اقدام برای ثبت نام تجهیزات فیبر نوری و سپس ثبت نام خط تلفن ثابت است.</p>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
